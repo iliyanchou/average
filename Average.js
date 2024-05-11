@@ -9,7 +9,7 @@ function processData() {
     var d = document.getElementById('d').value;
     var d = parseFloat(d);
 
-    // Process the data (Here we are just converting it to uppercase)
+
 let sum = a+b+c+d;
 let avnf = sum/4;
 let check = avnf - 0.5;
