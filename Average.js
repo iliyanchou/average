@@ -1,28 +1,50 @@
-function processData() {
-    // Get input value
-    var a = document.getElementById('a').value;
-    var a = parseFloat(a);
-    var b = document.getElementById('b').value;
-    var b = parseFloat(b);
-    var c = document.getElementById('c').value;
-    var c = parseFloat(c);
-    var d = document.getElementById('d').value;
-    var d = parseFloat(d);
+var inputField = document.getElementById('input');
+let inputArray = [];
+function getValues(){
+    let inputFieldContent = inputField.value;
+    if(inputFieldContent.length > 0){
+    for(i = 0, j = 0; i<inputFieldContent.length; i++){
+        if(i == 0){
+            inputArray[j] = inputFieldContent[0];
+        }
+        else{
+            if(inputFieldContent[i] !== ','){
+                if(inputArray[j]){
+                inputArray[j] += inputFieldContent[i];
+                }
+                else{
+                    inputArray[j] = inputFieldContent[i];
+                }
+            }
+            else{
+                j++;
+            }
+        }
+    }
 
-
-let sum = a+b+c+d;
-let avnf = sum/4;
-let check = avnf - 0.5;
-let checking = Math.floor(sum/4);
-if( check > checking || check == checking){
-    let final = Math.floor(sum/4) + 1;
-    document.getElementById('output').textContent = final;
+    for(i = 0; i<inputArray.length; i++){
+        inputArray[i] = Number(inputArray[i]);
+    }
 }
-else{};
-if(check < checking){
-    let finald = Math.floor(sum/4);
-    document.getElementById('output').textContent = finald;
+else{
+    inputArray[0] = 0;
+}
 }
 
-    
+
+function calculateAvg() {
+    let sum = 0;
+    inputArray.forEach(element => {
+        sum += element;
+    });
+    let avg = sum / inputArray.length;
+    return avg;
+}
+
+function getAverage(){
+    getValues();
+    var outputField = document.getElementById('output');
+    let avg = calculateAvg();
+    outputField.innerHTML = `The average is ${avg}`;
+    inputArray = [];
 }

@@ -5,21 +5,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Average calculator</title>
-<script src="Average.js">
     
 </script>
 </head>
 <body>
-    <input class="first" type="number" id="a" placeholder="Enter first number ">
-    <input class="second" type="number" id="b" placeholder="Enter second number ">
-    <input class="third" type="number" id="c" placeholder="Enter third number ">
-    <input class="forth" type="number" id="d" placeholder="Enter forth number ">
-    <button  class="button-1" onclick="processData()">Get average</button>
-
-    <p>
-    <label>The average is:</label>
-    <div id="output"></div>    
-    </p>
-    
+    <heading class="header">
+        <h1>Average calculator</h1>
+    </heading>
+    <Main class="mainSec">
+        <input class="input" type="text" id = "input" placeholder="Enter data separeted by commas">
+    <button  class="GetAvgBtn" onclick="getAverage()">Get average</button>
+        <p id = 'output' class="outputfield"></p>
+    </Main>
+    <script src="Average.js"></script>
 </body>
 </html>

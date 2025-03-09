@@ -1,56 +1,24 @@
-.first{
-    margin-left:10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mainSec{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    padding: 10px;
+    margin-top: 10px;
     text-align: center;
     font-family: arial;
     font-size: 15px;
     height: 10px;
-    width: 200px;
+    width: 300px;
 }
-.second{
-    margin-left:10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-    font-family: arial;
-    font-size: 15px;
-    height: 10px;
-    width: 200px;
-}
-.third{
-    margin-left:10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-    font-family: arial;
-    font-size: 15px;
-    height: 10px;
-    width: 200px;
-}
-.forth{
-    margin-left:10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-    font-family: arial;
-    font-size: 15px;
-    height: 10px;
-    width: 200px;
-}
-.button-1{
+.GetAvgBtn{
     margin-left:10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -66,10 +34,9 @@
     cursor: pointer;
     transition: opacity 0.5s, background-color 0.5s;
 }
-.button-1:hover{
+.GetAvgBtn:hover{
     opacity: 0.5;
 }
-.button-1:active{
+.GetAvgBtn:active{
     background-color: rgb(60, 60, 60);
-
 }
